@@ -7,6 +7,21 @@
 }
 
 
+.head{
+    width: 80vh;
+    background: rgb(223,171,98);
+    background: linear-gradient(142deg, rgba(223,171,98,0.7259278711484594) 10%, rgba(57,140,82,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    box-shadow: 4px 4px lightgrey;
+}
+
+.head h1{
+    color: white;
+    
+}
 
 
 body{
@@ -15,18 +30,24 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url("/Recourses/images/bg.jpg");
-    background-repeat: no-repeat;
-    background-size: 200vh 100vh;
+    background-image: url("/Recourses/images/plant.jpg");
+    
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .form{
-    background-color: lightgrey;
+    background: rgb(223,171,98);
+    background: linear-gradient(142deg, rgba(223,171,98,0.7259278711484594) 10%, rgba(57,140,82,1) 100%);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
     height: 60vh;
     width: 70vh;
 }
@@ -36,7 +57,7 @@ body{
 .form input{
     background-color: #FFFFFF;
     border: 2px solid #D6D9DC;
-    border-radius: 3px;
+    border-radius: 25px;
     width: 100%;
     padding: 7px;
     font-size: 14px;
@@ -79,4 +100,53 @@ input:not(:focus):not(:placeholder-shown):invalid {
 input:valid{
     border-color:green;
 }
+
+.form button{
+
+  appearance: none;
+  backface-visibility: hidden;
+  background-color: #27ae60;
+  border-radius: 8px;
+  border-style: none;
+  box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: 1.5;
+  outline: none;
+  overflow: hidden;
+  padding: 13px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.button-68:hover {
+  background-color: #1e8449;
+  opacity: 1;
+  transform: translateY(0);
+  transition-duration: .35s;
+}
+
+.button-68:active {
+  transform: translateY(2px);
+  transition-duration: .35s;
+}
+
+.button-68:hover {
+  box-shadow: rgba(39, 174, 96, .2) 0 6px 12px;
+}
+
 
