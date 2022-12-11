@@ -15,7 +15,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 25px;
-    box-shadow: 4px 4px lightgrey;
+    box-shadow: 2px 4px lightgrey;
 }
 
 .head h1{
@@ -25,14 +25,13 @@
 
 
 body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-image: url("/Recourses/images/plant.jpg");
-    
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+ 
+  background-image: url("/SignUp/Sign-upForm/Recourses/images/birdsBackground.png");
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
@@ -68,6 +67,7 @@ body{
 .form label {
     margin-bottom: 0px;
     color: white;
+    margin-left: 10px;
   }
 
 .field{
@@ -101,52 +101,73 @@ input:valid{
     border-color:green;
 }
 
+.buttonContainer{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .form button{
-
-  appearance: none;
-  backface-visibility: hidden;
-  background-color: #27ae60;
-  border-radius: 8px;
-  border-style: none;
-  box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: Inter,-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: normal;
-  line-height: 1.5;
+  width: 270px;
+  height: 80px;
+  border: none;
   outline: none;
-  overflow: hidden;
-  padding: 13px 20px;
-  position: relative;
+  background: #27ae60;
+  color: #fff;
+  font-size: 22px;
+  border-radius: 40px;
   text-align: center;
-  text-decoration: none;
-  transform: translate3d(0, 0, 0);
-  transition: all .3s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: top;
-  white-space: nowrap;
+  box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
 }
 
-.button-68:hover {
-  background-color: #1e8449;
+.check-box{
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  box-shadow: 0 0 12px -2px rgba(0,0,0,0.5);
+  position: absolute;
+  top: 0;
+  right: -40px;
+  opacity: 0;
+}
+
+.check-box svg{
+  width: 40px;
+  margin: 20px;
+}
+
+svg path{
+  stroke-width: 3;
+  stroke: #fff;
+  stroke-dasharray: 34;
+  stroke-dashoffset: 34;
+  stroke-linecap: round;
+}
+
+.active{
+  background: #ff2b75;
+  transition: 1s;
+}
+
+.active .check-box{
+  right: 0;
   opacity: 1;
-  transform: translateY(0);
-  transition-duration: .35s;
+  transition: 1s;
 }
 
-.button-68:active {
-  transform: translateY(2px);
-  transition-duration: .35s;
+.active p{
+  margin-right: 125px;
+  transition: 1s;
 }
 
-.button-68:hover {
-  box-shadow: rgba(39, 174, 96, .2) 0 6px 12px;
+.active svg path{
+  stroke-dashoffset: 0;
+  transition: 1s;
+  transition-delay: 1s;
 }
-
 
