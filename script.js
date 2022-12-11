@@ -16,7 +16,7 @@ const btn = document.querySelector("#btn");
 const btnText = document.querySelector("#btnText");
 
 btn.onclick = () => {
-  if (validateForm) {
+  if (validateForm = true) {
     btnText.innerHTML = "Thanks";
     btn.classList.add("active");
   }
