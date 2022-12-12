@@ -12,17 +12,11 @@ function validatePassword() {
 password.onchange = validatePassword;
 confirm_password.onkeyup = validatePassword;
 
-const btn = document.querySelector("#btn");
-const btnText = document.querySelector("#btnText");
 
-btn.onclick = () => {
-  if (validateForm = true) {
-    btnText.innerHTML = "Thanks";
-    btn.classList.add("active");
-  }
-};
+
 
 function validateForm() {
+  
   var fields = [
     "first_name",
     "last_name",
@@ -32,15 +26,26 @@ function validateForm() {
     "confirm_password",
   ];
 
-  var i,
-    l = fields.length;
-  var fieldname;
+  var i, l = fields.length;
   for (i = 0; i < l; i++) {
-    fieldname = fields[i];
-    if (document.forms["register"][fieldname].value === "") {
-      alert(fieldname + " can not be empty");
+    formInput = (document.querySelector(`#${fields[i]}`));
+    if (formInput.value == "") {
+      console.log(formInput)
+
       return false;
     }
   }
+  console.log(formInput.value)
   return true;
 }
+
+const btn = document.querySelector("#btn");
+const btnText = document.querySelector("#btnText");
+
+
+btn.onclick = () => {
+  if (validateForm()) {
+    btnText.innerHTML = "Thanks";
+    btn.classList.add("active");
+  }
+};
